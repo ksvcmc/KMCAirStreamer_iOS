@@ -1,0 +1,6 @@
+framework module KMCAirStreamer {
+  umbrella header "KMCAirStreamer.h"
+
+  export *
+  module * { export * }
+}
