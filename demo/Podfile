@@ -1,0 +1,10 @@
+inhibit_all_warnings!
+install! 'cocoapods', :deterministic_uuids => false
+use_frameworks!
+
+target 'KMCAirStreamerDemo_iOS' do
+  pod 'GPUImage'
+  pod 'libksygpulive/libksygpulive'
+  pod 'CocoaAsyncSocket', '7.4.1'
+  pod 'KMCAirStreamer',:path=>"../"
+end

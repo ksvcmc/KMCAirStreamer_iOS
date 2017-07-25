@@ -1,0 +1,38 @@
+PODS:
+  - CocoaAsyncSocket (7.4.1)
+  - GPUImage (0.1.7)
+  - KMCAirStreamer (1.0.0)
+  - libksygpulive/base (2.5.0)
+  - libksygpulive/libksygpulive (2.5.0):
+    - GPUImage
+    - libksygpulive/streamerbase
+  - libksygpulive/mediacodec (2.5.0)
+  - libksygpulive/mediacore_enc_base (2.5.0)
+  - libksygpulive/mediacore_enc_lite (2.5.0)
+  - libksygpulive/streamerbase (2.5.0):
+    - libksygpulive/base
+    - libksygpulive/mediacodec
+    - libksygpulive/mediacore_enc_base
+    - libksygpulive/mediacore_enc_lite
+    - libksygpulive/yuv
+  - libksygpulive/yuv (2.5.0)
+
+DEPENDENCIES:
+  - CocoaAsyncSocket (= 7.4.1)
+  - GPUImage
+  - KMCAirStreamer (from `../`)
+  - libksygpulive/libksygpulive
+
+EXTERNAL SOURCES:
+  KMCAirStreamer:
+    :path: ../
+
+SPEC CHECKSUMS:
+  CocoaAsyncSocket: 7cbf214b27f8e7f7574db6a3fd96352ffaed433d
+  GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
+  KMCAirStreamer: 87d3ef8bdff619af3c2a828c870b6be9ca183cbe
+  libksygpulive: 7590768f39c7855df6cd428ac946b49b973292a1
+
+PODFILE CHECKSUM: 087dbd87f30222686e3904d77e38735e0b111be3
+
+COCOAPODS: 1.2.1

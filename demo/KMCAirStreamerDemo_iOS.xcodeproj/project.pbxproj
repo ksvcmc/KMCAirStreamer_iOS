@@ -1,0 +1,403 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F23340A41F1C8C11007814B2 /* UIColor+Expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = F23340A31F1C8C11007814B2 /* UIColor+Expanded.m */; };
+		F23340A71F1CA8F4007814B2 /* helpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F23340A61F1CA8F4007814B2 /* helpViewController.m */; };
+		F24E8FAF1F134E0A006BB3ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F24E8FAE1F134E0A006BB3ED /* main.m */; };
+		F24E8FB21F134E0A006BB3ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F24E8FB11F134E0A006BB3ED /* AppDelegate.m */; };
+		F24E8FB81F134E0A006BB3ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F24E8FB61F134E0A006BB3ED /* Main.storyboard */; };
+		F24E8FBA1F134E0A006BB3ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F24E8FB91F134E0A006BB3ED /* Assets.xcassets */; };
+		F24E8FBD1F134E0A006BB3ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F24E8FBB1F134E0A006BB3ED /* LaunchScreen.storyboard */; };
+		F24E8FF21F1354D4006BB3ED /* recordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F24E8FEB1F1354D4006BB3ED /* recordViewController.m */; };
+		F24E8FF51F135875006BB3ED /* KSYAirStreamKit.m in Sources */ = {isa = PBXBuildFile; fileRef = F24E8FF41F135875006BB3ED /* KSYAirStreamKit.m */; };
+		F296DBBA1F1F3E5B00B29FD4 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F296DBB61F1F3E5B00B29FD4 /* LICENSE */; };
+		F296DBBB1F1F3E5B00B29FD4 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F296DBB81F1F3E5B00B29FD4 /* MBProgressHUD.m */; };
+		F296DBBC1F1F3E5B00B29FD4 /* README.mdown in Sources */ = {isa = PBXBuildFile; fileRef = F296DBB91F1F3E5B00B29FD4 /* README.mdown */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F24E8FD51F134E6F006BB3ED /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		F23340A21F1C8C11007814B2 /* UIColor+Expanded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Expanded.h"; sourceTree = "<group>"; };
+		F23340A31F1C8C11007814B2 /* UIColor+Expanded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Expanded.m"; sourceTree = "<group>"; };
+		F23340A51F1CA8F4007814B2 /* helpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = helpViewController.h; sourceTree = "<group>"; };
+		F23340A61F1CA8F4007814B2 /* helpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = helpViewController.m; sourceTree = "<group>"; };
+		F24E8FAA1F134E0A006BB3ED /* KMCAirStreamerDemo_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KMCAirStreamerDemo_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F24E8FAE1F134E0A006BB3ED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F24E8FB01F134E0A006BB3ED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F24E8FB11F134E0A006BB3ED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F24E8FB71F134E0A006BB3ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F24E8FB91F134E0A006BB3ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F24E8FBC1F134E0A006BB3ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F24E8FBE1F134E0A006BB3ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F24E8FEA1F1354D4006BB3ED /* recordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = recordViewController.h; sourceTree = "<group>"; };
+		F24E8FEB1F1354D4006BB3ED /* recordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = recordViewController.m; sourceTree = "<group>"; };
+		F24E8FF31F135875006BB3ED /* KSYAirStreamKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSYAirStreamKit.h; sourceTree = "<group>"; };
+		F24E8FF41F135875006BB3ED /* KSYAirStreamKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSYAirStreamKit.m; sourceTree = "<group>"; };
+		F296DBB61F1F3E5B00B29FD4 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		F296DBB71F1F3E5B00B29FD4 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		F296DBB81F1F3E5B00B29FD4 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		F296DBB91F1F3E5B00B29FD4 /* README.mdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.mdown; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F24E8FA71F134E0A006BB3ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F24E8FA11F134E0A006BB3ED = {
+			isa = PBXGroup;
+			children = (
+				F24E8FAC1F134E0A006BB3ED /* KMCAirStreamerDemo */,
+				F24E8FAB1F134E0A006BB3ED /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F24E8FAB1F134E0A006BB3ED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F24E8FAA1F134E0A006BB3ED /* KMCAirStreamerDemo_iOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F24E8FAC1F134E0A006BB3ED /* KMCAirStreamerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				F296DBB51F1F3E5B00B29FD4 /* MBProgressHUD */,
+				F24E8FB01F134E0A006BB3ED /* AppDelegate.h */,
+				F24E8FB11F134E0A006BB3ED /* AppDelegate.m */,
+				F23340A21F1C8C11007814B2 /* UIColor+Expanded.h */,
+				F23340A31F1C8C11007814B2 /* UIColor+Expanded.m */,
+				F24E8FEA1F1354D4006BB3ED /* recordViewController.h */,
+				F24E8FEB1F1354D4006BB3ED /* recordViewController.m */,
+				F23340A51F1CA8F4007814B2 /* helpViewController.h */,
+				F23340A61F1CA8F4007814B2 /* helpViewController.m */,
+				F24E8FF31F135875006BB3ED /* KSYAirStreamKit.h */,
+				F24E8FF41F135875006BB3ED /* KSYAirStreamKit.m */,
+				F24E8FB61F134E0A006BB3ED /* Main.storyboard */,
+				F24E8FB91F134E0A006BB3ED /* Assets.xcassets */,
+				F24E8FBB1F134E0A006BB3ED /* LaunchScreen.storyboard */,
+				F24E8FBE1F134E0A006BB3ED /* Info.plist */,
+				F24E8FAD1F134E0A006BB3ED /* Supporting Files */,
+			);
+			path = KMCAirStreamerDemo;
+			sourceTree = "<group>";
+		};
+		F24E8FAD1F134E0A006BB3ED /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F24E8FAE1F134E0A006BB3ED /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F296DBB51F1F3E5B00B29FD4 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				F296DBB61F1F3E5B00B29FD4 /* LICENSE */,
+				F296DBB71F1F3E5B00B29FD4 /* MBProgressHUD.h */,
+				F296DBB81F1F3E5B00B29FD4 /* MBProgressHUD.m */,
+				F296DBB91F1F3E5B00B29FD4 /* README.mdown */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F24E8FA91F134E0A006BB3ED /* KMCAirStreamerDemo_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F24E8FC11F134E0A006BB3ED /* Build configuration list for PBXNativeTarget "KMCAirStreamerDemo_iOS" */;
+			buildPhases = (
+				F24E8FA61F134E0A006BB3ED /* Sources */,
+				F24E8FA71F134E0A006BB3ED /* Frameworks */,
+				F24E8FA81F134E0A006BB3ED /* Resources */,
+				F24E8FD51F134E6F006BB3ED /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KMCAirStreamerDemo_iOS;
+			productName = KMCAirStreamerDemo;
+			productReference = F24E8FAA1F134E0A006BB3ED /* KMCAirStreamerDemo_iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F24E8FA21F134E0A006BB3ED /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = ksyun;
+				TargetAttributes = {
+					F24E8FA91F134E0A006BB3ED = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = ZGJ54Q7R45;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = F24E8FA51F134E0A006BB3ED /* Build configuration list for PBXProject "KMCAirStreamerDemo_iOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F24E8FA11F134E0A006BB3ED;
+			productRefGroup = F24E8FAB1F134E0A006BB3ED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F24E8FA91F134E0A006BB3ED /* KMCAirStreamerDemo_iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F24E8FA81F134E0A006BB3ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F24E8FBD1F134E0A006BB3ED /* LaunchScreen.storyboard in Resources */,
+				F24E8FBA1F134E0A006BB3ED /* Assets.xcassets in Resources */,
+				F296DBBA1F1F3E5B00B29FD4 /* LICENSE in Resources */,
+				F24E8FB81F134E0A006BB3ED /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F24E8FA61F134E0A006BB3ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F23340A71F1CA8F4007814B2 /* helpViewController.m in Sources */,
+				F24E8FB21F134E0A006BB3ED /* AppDelegate.m in Sources */,
+				F24E8FF51F135875006BB3ED /* KSYAirStreamKit.m in Sources */,
+				F24E8FAF1F134E0A006BB3ED /* main.m in Sources */,
+				F24E8FF21F1354D4006BB3ED /* recordViewController.m in Sources */,
+				F296DBBC1F1F3E5B00B29FD4 /* README.mdown in Sources */,
+				F23340A41F1C8C11007814B2 /* UIColor+Expanded.m in Sources */,
+				F296DBBB1F1F3E5B00B29FD4 /* MBProgressHUD.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F24E8FB61F134E0A006BB3ED /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F24E8FB71F134E0A006BB3ED /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F24E8FBB1F134E0A006BB3ED /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F24E8FBC1F134E0A006BB3ED /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F24E8FBF1F134E0A006BB3ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F24E8FC01F134E0A006BB3ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F24E8FC21F134E0A006BB3ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ZGJ54Q7R45;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/CocoaAsyncSocket\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/GPUImage\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/libksygpulive\"",
+					../framework,
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = KMCAirStreamerDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ksyun.KMCAirStreamerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F24E8FC31F134E0A006BB3ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ZGJ54Q7R45;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/CocoaAsyncSocket\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/GPUImage\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/libksygpulive\"",
+					../framework,
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = KMCAirStreamerDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ksyun.KMCAirStreamerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F24E8FA51F134E0A006BB3ED /* Build configuration list for PBXProject "KMCAirStreamerDemo_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F24E8FBF1F134E0A006BB3ED /* Debug */,
+				F24E8FC01F134E0A006BB3ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F24E8FC11F134E0A006BB3ED /* Build configuration list for PBXNativeTarget "KMCAirStreamerDemo_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F24E8FC21F134E0A006BB3ED /* Debug */,
+				F24E8FC31F134E0A006BB3ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F24E8FA21F134E0A006BB3ED /* Project object */;
+}
