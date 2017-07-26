@@ -25,7 +25,9 @@
 
 @implementation KSYAirStreamKit
 
-- (id) initWithTokeID:(NSString *)tokenID {
+- (id) initWithTokeID:(NSString *)tokenID
+            onSuccess:(void (^)(void))completeSuccess
+            onFailure:(void (^)(AuthorizeError iErrorCode))completeFailure{
     self = [super init];
     if (self == nil) {
         return nil;
@@ -45,9 +47,24 @@
     
     _airTunesServer = [[KMCAirTunesServer alloc] init];
     [_airTunesServer authorizeWithTokeID:tokenID onSuccess:^{
-        NSLog(@"鉴权成功");
+        if(completeSuccess)
+            completeSuccess();
     } onFailure:^(AuthorizeError iErrorCode) {
-        NSLog(@"鉴权失败");
+        if(iErrorCode ==AUTHORIZE_NETWORK_ERROR){
+            NSString * errorMessage = [[NSString alloc]initWithFormat:@"网络异常，请打开网络"];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"错误提示" message:errorMessage delegate:nil cancelButtonTitle:@"好的" otherButtonTitles:nil, nil];
+                [alert show];
+            });
+        }else{
+            NSString * errorMessage = [[NSString alloc]initWithFormat:@"鉴权失败,错误码:%lu",(unsigned long)iErrorCode];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"错误提示" message:errorMessage delegate:nil cancelButtonTitle:@"好的" otherButtonTitles:nil, nil];
+                [alert show];
+            });
+        }
+        if(completeFailure)
+            completeFailure(iErrorCode);
     }];
     _streamerBase   = [[KSYStreamerBase alloc] init];
     _aMixer         = [[KSYAudioMixer alloc] init];

@@ -41,7 +41,11 @@ typedef enum : NSUInteger {
     /**
      服务器异常
      */
-    AUTHORIZE_SERVICE_EXCEPTION = 1008
+    AUTHORIZE_SERVICE_EXCEPTION = 1008,
+    /**
+     网络异常
+     */
+    AUTHORIZE_NETWORK_ERROR = 1009
 } AuthorizeError;
 
 /** airplay的错误码 */

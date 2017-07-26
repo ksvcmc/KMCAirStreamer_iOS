@@ -38,8 +38,12 @@
 
     [self setupUI];
     
-   
-    _kit = [[KSYAirStreamKit alloc] initWithTokeID:@"eb84554d62dfddcf0f6328c43bacba13"];
+    _kit = [[KSYAirStreamKit alloc] initWithTokeID:@"eb84554d62dfddcf0f6328c43bacba13" onSuccess:^(void){
+        NSLog(@"鉴权成功");
+        self.recordButton.enabled = YES;
+    } onFailure:^(AuthorizeError iErrorCode) {
+        NSLog(@"鉴权失败");
+    }];
     _kit.delegate = self;
     
     _frameRate = 24;
@@ -50,6 +54,9 @@
            selector:@selector(onStreamStateChange)
                name:KSYStreamStateDidChangeNotification
              object:nil];
+    
+    UITapGestureRecognizer *tapGes = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(bgViewPressed)];
+    [self.view addGestureRecognizer:tapGes];
 }
 
 -(void)setupUI{
@@ -60,6 +67,8 @@
     NSString *devCode = [[[[[UIDevice currentDevice] identifierForVendor] UUIDString] lowercaseString]substringToIndex:3];
     NSString *url     = [NSString stringWithFormat:@"%@/%@", rtmpSrv, devCode];
     self.addrTextField.text = url;
+    
+    self.recordButton.enabled = NO;
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -67,6 +76,10 @@
 }
 
 #pragma mark - action
+
+-(void)bgViewPressed{
+    [self.addrTextField resignFirstResponder];
+}
 - (IBAction)resolutionValue:(id)sender {
     switch (self.resolution.selectedSegmentIndex) {
         case 0:
@@ -140,17 +153,32 @@
             progressHud.color = [UIColor colorWithHexString:@"#1a2845"];
             progressHud.dimBackground = YES;
             progressHud.cornerRadius =10;
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+            });
         }
     }
     
     if(_kit.streamerBase.streamState == KSYStreamStateConnected){
-        [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
         //设置录制时间
         [self startTimer];
         if(_localRecord){
             NSLog(@"录制到本地");
             [self startRecordToLocalFile];
         }
+    }
+    
+    if(_kit.streamerBase.streamState == KSYStreamStateError){
+        [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+        MBProgressHUD *progressHud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        progressHud.mode = MBProgressHUDModeIndeterminate;
+        progressHud.labelText = [_kit.streamerBase getCurStreamStateName];
+        progressHud.color = [UIColor colorWithHexString:@"#1a2845"];
+        progressHud.dimBackground = YES;
+        progressHud.cornerRadius =10;
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+        });
     }
     
 }

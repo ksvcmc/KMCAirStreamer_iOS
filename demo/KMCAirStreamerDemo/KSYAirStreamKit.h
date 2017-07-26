@@ -23,7 +23,9 @@
 @interface KSYAirStreamKit : NSObject
 
 /**用魔方token鉴权**/
-- (id) initWithTokeID:(NSString *)tokenID;
+- (id) initWithTokeID:(NSString *)tokenID
+            onSuccess:(void (^)(void))completeSuccess
+            onFailure:(void (^)(AuthorizeError iErrorCode))completeFailure;
 /** airplay 接受端 */
 @property KMCAirTunesServer  *airTunesServer;
 /** airplay 配置信息 */
