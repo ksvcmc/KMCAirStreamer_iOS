@@ -4,7 +4,7 @@
 金山魔方是一个多媒体能力提供平台，通过统一接入API、统一鉴权、统一计费等多种手段，降低客户接入多媒体处理能力的代价，提供多媒体能力供应商的效率。 本文档主要对录屏功能说明。
 金山云录屏直播SDK是金山云提供的直播解决方案的一部分，完成了iOS端全屏录制的功能，主要实现思路是本SDK内实现了一个Airplay的接收端, 开始录屏时iOS系统与SDK建立连接, SDK收到画面后, 编码发送到直播服务器. 其中编码和推流功能使用金山云直播SDK实现.
 
-![Alt text](./1500969069950.png)
+![Alt text](https://raw.githubusercontent.com/wiki/ksvcmc/KMCAirStreamer_iOS/airplay.png)
 
 
 可以用于手游等直播录制场景。
