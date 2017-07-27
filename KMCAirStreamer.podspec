@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "KMCAirStreamer"
-  s.version      = "1.0.0"
+  s.version      = "1.0.6"
   s.summary      = "金山录屏魔方方案"
 
   s.ios.deployment_target = "8.0"

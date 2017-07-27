@@ -19,7 +19,6 @@
 		F296DBBA1F1F3E5B00B29FD4 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F296DBB61F1F3E5B00B29FD4 /* LICENSE */; };
 		F296DBBB1F1F3E5B00B29FD4 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F296DBB81F1F3E5B00B29FD4 /* MBProgressHUD.m */; };
 		F296DBBC1F1F3E5B00B29FD4 /* README.mdown in Sources */ = {isa = PBXBuildFile; fileRef = F296DBB91F1F3E5B00B29FD4 /* README.mdown */; };
-		FAD7603AE792B4823F7F0D25 /* Pods_KMCAirStreamerDemo_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03647F91623815CC03037A9D /* Pods_KMCAirStreamerDemo_iOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -36,9 +35,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		03647F91623815CC03037A9D /* Pods_KMCAirStreamerDemo_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KMCAirStreamerDemo_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A4F776B16708039793686027 /* Pods-KMCAirStreamerDemo_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KMCAirStreamerDemo_iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KMCAirStreamerDemo_iOS/Pods-KMCAirStreamerDemo_iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		CC3936961AD4297A6E04987D /* Pods-KMCAirStreamerDemo_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KMCAirStreamerDemo_iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-KMCAirStreamerDemo_iOS/Pods-KMCAirStreamerDemo_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		F23340A21F1C8C11007814B2 /* UIColor+Expanded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Expanded.h"; sourceTree = "<group>"; };
 		F23340A31F1C8C11007814B2 /* UIColor+Expanded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Expanded.m"; sourceTree = "<group>"; };
 		F23340A51F1CA8F4007814B2 /* helpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = helpViewController.h; sourceTree = "<group>"; };
@@ -66,37 +62,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAD7603AE792B4823F7F0D25 /* Pods_KMCAirStreamerDemo_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		44D3DA187C165C0580554FBC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				03647F91623815CC03037A9D /* Pods_KMCAirStreamerDemo_iOS.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		92A880457805E732CAB6FAE4 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				A4F776B16708039793686027 /* Pods-KMCAirStreamerDemo_iOS.debug.xcconfig */,
-				CC3936961AD4297A6E04987D /* Pods-KMCAirStreamerDemo_iOS.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		F24E8FA11F134E0A006BB3ED = {
 			isa = PBXGroup;
 			children = (
 				F24E8FAC1F134E0A006BB3ED /* KMCAirStreamerDemo */,
 				F24E8FAB1F134E0A006BB3ED /* Products */,
-				92A880457805E732CAB6FAE4 /* Pods */,
-				44D3DA187C165C0580554FBC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -157,13 +133,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F24E8FC11F134E0A006BB3ED /* Build configuration list for PBXNativeTarget "KMCAirStreamerDemo_iOS" */;
 			buildPhases = (
-				CF3ACBF87E7299BE48EC84F7 /* [CP] Check Pods Manifest.lock */,
 				F24E8FA61F134E0A006BB3ED /* Sources */,
 				F24E8FA71F134E0A006BB3ED /* Frameworks */,
 				F24E8FA81F134E0A006BB3ED /* Resources */,
 				F24E8FD51F134E6F006BB3ED /* Embed Frameworks */,
-				B0A971EBFEA9865B54D0BE80 /* [CP] Embed Pods Frameworks */,
-				F33900344F97FD753D7285B4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -226,54 +199,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		B0A971EBFEA9865B54D0BE80 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KMCAirStreamerDemo_iOS/Pods-KMCAirStreamerDemo_iOS-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CF3ACBF87E7299BE48EC84F7 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		F33900344F97FD753D7285B4 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KMCAirStreamerDemo_iOS/Pods-KMCAirStreamerDemo_iOS-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F24E8FA61F134E0A006BB3ED /* Sources */ = {
@@ -407,7 +332,6 @@
 		};
 		F24E8FC21F134E0A006BB3ED /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A4F776B16708039793686027 /* Pods-KMCAirStreamerDemo_iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ZGJ54Q7R45;
@@ -431,7 +355,6 @@
 		};
 		F24E8FC31F134E0A006BB3ED /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CC3936961AD4297A6E04987D /* Pods-KMCAirStreamerDemo_iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ZGJ54Q7R45;
