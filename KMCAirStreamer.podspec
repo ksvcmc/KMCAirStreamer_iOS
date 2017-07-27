@@ -85,7 +85,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       ={ :git => "git@github.com:ksvcmc/KMCAirStreamerDemo_iOS.git", :tag => "v#{s.version}" }
+  s.source       ={ :git => "https://github.com/ksvcmc/KMCAirStreamer_iOS.git", :tag => "v#{s.version}" }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #

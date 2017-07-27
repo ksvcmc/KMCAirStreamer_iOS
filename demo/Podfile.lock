@@ -1,7 +1,7 @@
 PODS:
   - CocoaAsyncSocket (7.4.1)
   - GPUImage (0.1.7)
-  - KMCAirStreamer (1.0.0)
+  - KMCAirStreamer (1.0.6)
   - libksygpulive/base (2.5.0)
   - libksygpulive/libksygpulive (2.5.0):
     - GPUImage
@@ -20,19 +20,15 @@ PODS:
 DEPENDENCIES:
   - CocoaAsyncSocket (= 7.4.1)
   - GPUImage
-  - KMCAirStreamer (from `../`)
+  - KMCAirStreamer
   - libksygpulive/libksygpulive
-
-EXTERNAL SOURCES:
-  KMCAirStreamer:
-    :path: ../
 
 SPEC CHECKSUMS:
   CocoaAsyncSocket: 7cbf214b27f8e7f7574db6a3fd96352ffaed433d
   GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
-  KMCAirStreamer: 87d3ef8bdff619af3c2a828c870b6be9ca183cbe
+  KMCAirStreamer: 430c194e9ccebc598c855868d2a4bddee355757c
   libksygpulive: 7590768f39c7855df6cd428ac946b49b973292a1
 
-PODFILE CHECKSUM: 087dbd87f30222686e3904d77e38735e0b111be3
+PODFILE CHECKSUM: 905d3f3c283c1c7ae5184971ed6d36cf3097c7cc
 
 COCOAPODS: 1.2.1
