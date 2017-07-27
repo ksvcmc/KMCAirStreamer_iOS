@@ -47,6 +47,24 @@
     
     _airTunesServer = [[KMCAirTunesServer alloc] init];
     [_airTunesServer authorizeWithTokeID:tokenID onSuccess:^{
+        
+        _streamerBase   = [[KSYStreamerBase alloc] init];
+        _aMixer         = [[KSYAudioMixer alloc] init];
+        _aMixer.mainTrack = 0;
+        [_aMixer setTrack:0 enable:YES];
+        _airTunesServer.delegate = self;
+        __weak typeof(self) weakSelf = self;
+        _airTunesServer.videoProcessingCallback = ^(CVPixelBufferRef pixelBuffer, CMTime timeInfo) {
+            [weakSelf.streamerBase processVideoPixelBuffer:pixelBuffer timeInfo:timeInfo];
+        };
+        _aMixer.audioProcessingCallback = ^(CMSampleBufferRef buf) {
+            [weakSelf.streamerBase processAudioSampleBuffer:buf];
+        };
+        _streamerBase.videoCodec = KSYVideoCodec_AUTO;
+        _streamerBase.streamStateChange = ^(KSYStreamState state) {
+            [weakSelf onStreamStateChange:state];
+        };
+        
         if(completeSuccess)
             completeSuccess();
     } onFailure:^(AuthorizeError iErrorCode) {
@@ -66,22 +84,6 @@
         if(completeFailure)
             completeFailure(iErrorCode);
     }];
-    _streamerBase   = [[KSYStreamerBase alloc] init];
-    _aMixer         = [[KSYAudioMixer alloc] init];
-    _aMixer.mainTrack = 0;
-    [_aMixer setTrack:0 enable:YES];
-    _airTunesServer.delegate = self;
-    __weak typeof(self) weakSelf = self;
-    _airTunesServer.videoProcessingCallback = ^(CVPixelBufferRef pixelBuffer, CMTime timeInfo) {
-        [weakSelf.streamerBase processVideoPixelBuffer:pixelBuffer timeInfo:timeInfo];
-    };
-    _aMixer.audioProcessingCallback = ^(CMSampleBufferRef buf) {
-        [weakSelf.streamerBase processAudioSampleBuffer:buf];
-    };
-    _streamerBase.videoCodec = KSYVideoCodec_AUTO;
-    _streamerBase.streamStateChange = ^(KSYStreamState state) {
-        [weakSelf onStreamStateChange:state];
-    };
 
     return self;
 }

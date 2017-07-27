@@ -40,7 +40,9 @@
     
     _kit = [[KSYAirStreamKit alloc] initWithTokeID:@"eb84554d62dfddcf0f6328c43bacba13" onSuccess:^(void){
         NSLog(@"鉴权成功");
-        self.recordButton.enabled = YES;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.recordButton.enabled = YES;
+        });
     } onFailure:^(AuthorizeError iErrorCode) {
         NSLog(@"鉴权失败");
     }];

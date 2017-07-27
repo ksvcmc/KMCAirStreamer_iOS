@@ -200,12 +200,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="helpme" translatesAutoresizingMaskIntoConstraints="NO" id="hjI-SJ-b30">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helpme" translatesAutoresizingMaskIntoConstraints="NO" id="hjI-SJ-b30">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hjI-SJ-b30" firstAttribute="leading" secondItem="3bb-CR-OHr" secondAttribute="leading" id="2Ql-Dw-R6F"/>
+                            <constraint firstItem="hjI-SJ-b30" firstAttribute="top" secondItem="Nba-mX-YpI" secondAttribute="bottom" id="3kP-f2-lHm"/>
+                            <constraint firstAttribute="trailing" secondItem="hjI-SJ-b30" secondAttribute="trailing" id="Nwl-PD-lcZ"/>
+                            <constraint firstItem="HEc-yk-pHt" firstAttribute="top" secondItem="hjI-SJ-b30" secondAttribute="bottom" id="ayA-wl-heX"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="使用帮助" id="l82-Q2-3SY"/>
                 </viewController>
