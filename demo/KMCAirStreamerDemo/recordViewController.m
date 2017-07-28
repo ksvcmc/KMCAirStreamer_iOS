@@ -11,6 +11,7 @@
 #import "UIColor+Expanded.h"
 #import <AssetsLibrary/AssetsLibrary.h>
 #import "MBProgressHUD.h"
+#import <Photos/Photos.h>
 
 @interface recordViewController () <KSYAirDelegate>{
     KSYAirStreamKit * _kit;
@@ -36,6 +37,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    [self askForPhotoLibraryAuth];
+    [self askForMicAuth];
     [self setupUI];
     
     _kit = [[KSYAirStreamKit alloc] initWithTokeID:@"eb84554d62dfddcf0f6328c43bacba13" onSuccess:^(void){
@@ -60,6 +63,41 @@
     UITapGestureRecognizer *tapGes = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(bgViewPressed)];
     [self.view addGestureRecognizer:tapGes];
 }
+
+-(void)askForPhotoLibraryAuth{
+    PHAuthorizationStatus photoAuthorStatus = [PHPhotoLibrary authorizationStatus];
+    switch (photoAuthorStatus) {
+        case PHAuthorizationStatusNotDetermined:
+            [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
+                if (status == PHAuthorizationStatusAuthorized) {
+                    NSLog(@"Authorized");
+                }else{
+                    NSLog(@"Denied or Restricted");
+                }
+            NSLog(@"not Determined");
+            }];
+            break;
+        default:
+            break;
+    }
+}
+-(void)askForMicAuth{
+    AVAuthorizationStatus AVstatus = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeAudio];//麦克风权限
+    switch (AVstatus) {
+        case AVAuthorizationStatusNotDetermined:
+            [AVCaptureDevice requestAccessForMediaType:AVMediaTypeAudio completionHandler:^(BOOL granted) {//麦克风权限
+                if (granted) {
+                    NSLog(@"Authorized");
+                }else{
+                    NSLog(@"Denied or Restricted");
+                }}];
+            break;
+        default:
+            break;
+    }
+    
+}
+
 
 -(void)setupUI{
     //分辨率颜色
