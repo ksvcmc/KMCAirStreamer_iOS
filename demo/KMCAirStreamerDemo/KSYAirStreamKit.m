@@ -64,6 +64,8 @@
         _streamerBase.streamStateChange = ^(KSYStreamState state) {
             [weakSelf onStreamStateChange:state];
         };
+        _streamerBase.videoEncodePerf = KSYVideoEncodePer_HighPerformance;
+
         
         if(completeSuccess)
             completeSuccess();
