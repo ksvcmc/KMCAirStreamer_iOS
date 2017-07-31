@@ -8,6 +8,8 @@
 
 
 可以用于手游等直播录制场景。
+## 效果展示
+![Alt text](https://raw.githubusercontent.com/wiki/ksvcmc/KMCAirStreamer_iOS/airplayimg.jpg)
 
 ## 录屏功能
 
