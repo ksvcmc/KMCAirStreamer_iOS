@@ -43,8 +43,6 @@
                name:KSYNetStateEventNotification
              object:nil];
     
-    _videoBitrate = 1000;
-    
     _airTunesServer = [[KMCAirTunesServer alloc] init];
     [_airTunesServer authorizeWithTokeID:tokenID onSuccess:^{
         
@@ -107,7 +105,7 @@
     NSLog(@"开始镜像");
     _streamerBase.videoFPS = _airCfg.framerate;
     _streamerBase.videoMaxBitrate  = _videoBitrate;
-    _streamerBase.videoInitBitrate = _videoBitrate*6/10;
+    _streamerBase.videoInitBitrate = _videoBitrate;
     _streamerBase.videoMinBitrate  = 0;
     [_streamerBase startStream:[NSURL URLWithString:_streamUrl]];
     if (_delegate && [_delegate respondsToSelector:@selector(didStartMirroring:)]) {

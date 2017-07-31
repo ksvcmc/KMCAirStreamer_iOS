@@ -20,6 +20,7 @@
     BOOL _localRecord;
     int _frameRate;
     int _videoSize;
+    int _bitrate;
 }
 @property (weak, nonatomic) IBOutlet UIButton *recordButton;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *resolution;
@@ -28,6 +29,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *addrTextField;
 @property (weak, nonatomic) IBOutlet UILabel *frameRateLabel;
 @property (weak, nonatomic) IBOutlet UILabel *timerLabel;
+@property (weak, nonatomic) IBOutlet UISlider *bitrateSlide;
+@property (weak, nonatomic) IBOutlet UILabel *bitrateLabel;
 
 @end
 
@@ -53,6 +56,7 @@
     
     _frameRate = 24;
     _videoSize = 720;
+    _bitrate = 1500;
     
     NSNotificationCenter* dc = [NSNotificationCenter defaultCenter];
     [dc addObserver:self
@@ -135,6 +139,12 @@
             _videoSize = 720;
     }
 }
+- (IBAction)bitrateValueChanged:(id)sender {
+    UISlider * slider = sender;
+    _bitrate = slider.value;
+    
+    self.bitrateLabel.text = [NSString stringWithFormat:@"%dkbps",(int)slider.value];
+}
 - (IBAction)frameRateChanged:(id)sender {
     UISlider * slider = sender;
     _frameRate = slider.value;
@@ -160,16 +170,17 @@
         cfg.videoSize = _videoSize;
 
         _kit.airCfg = cfg;
-        _kit.videoBitrate = 1000;
         //设置推流地址
         _kit.streamUrl = self.addrTextField.text;
+        //设置码率
+        _kit.videoBitrate = _bitrate;
         //开启服务
         [_kit startService];
         
         self.resolution.enabled = NO;
         self.saveSwitch.enabled = NO;
         self.frameSlide.enabled = NO;
-
+        self.bitrateSlide.enabled = NO;
     }
     else{//结束录制
         [self stopTimer];
@@ -178,6 +189,8 @@
         self.resolution.enabled = YES;
         self.saveSwitch.enabled = YES;
         self.frameSlide.enabled = YES;
+        self.bitrateSlide.enabled = YES;
+
     }
 }
 
