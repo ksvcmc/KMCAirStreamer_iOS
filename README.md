@@ -8,6 +8,8 @@
 
 
 可以用于手游等直播录制场景。
+## 效果展示
+![Alt text](https://raw.githubusercontent.com/wiki/ksvcmc/KMCAirStreamer_iOS/airplayimg.jpg)
 
 ## 录屏功能
 
@@ -146,7 +148,9 @@ property(nonatomic, copy) void(^videoProcessingCallback)(CVPixelBufferRef pixelB
 
 6.参照文档和DEMO填写TOKEN，就可以Run通项目了。  
 7.试用中或试用结束后，有意愿购买该服务可以与我们的商务人员联系购买。  
-（商务Email:KSC-VBU-KMC@kingsoft.com）  
+（商务Email:KSC-VBU-KMC@kingsoft.com） 
+## Demo下载
+![Alt text](https://raw.githubusercontent.com/wiki/ksvcmc/KMCAirStreamer_iOS/ios.png)
 ## 反馈与建议  
 主页：[金山魔方](https://docs.ksyun.com/read/latest/142/_book/index.html)  
 邮箱：ksc-vbu-kmc-dev@kingsoft.com  
