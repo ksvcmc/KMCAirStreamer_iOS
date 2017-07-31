@@ -59,6 +59,7 @@
             [weakSelf.streamerBase processAudioSampleBuffer:buf];
         };
         _streamerBase.videoCodec = KSYVideoCodec_AUTO;
+        _streamerBase.audioCodec = KSYAudioCodec_AT_AAC;
         _streamerBase.streamStateChange = ^(KSYStreamState state) {
             [weakSelf onStreamStateChange:state];
         };
