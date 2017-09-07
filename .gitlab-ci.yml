@@ -11,7 +11,7 @@ build_pod_dy:
   script:
     - cd demo
     - pod install
-    - xcodebuild -workspace *.xcwork* -scheme KMCAirStreamerDemo_iOS -quiet
+    - xcodebuild -workspace *.xcwork* -scheme "KMCAirStreamerDemo_iOS" -quiet
   tags:
     - ios
 
@@ -20,6 +20,6 @@ build_pod_static:
   script:
     - cd demo
     - pod install
-    - xcodebuild -workspace *.xcwork* -scheme KMCAirStreamerDemo_iOS -quiet
+    - xcodebuild -workspace *.xcwork* -scheme "KMCAirStreamerDemo_iOS" -quiet
   tags:
     - ios
