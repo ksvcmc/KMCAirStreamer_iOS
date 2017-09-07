@@ -185,7 +185,7 @@
 				TargetAttributes = {
 					F24E8FA91F134E0A006BB3ED = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 36PUU93BJ2;
+						DevelopmentTeam = ZGJ54Q7R45;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -410,7 +410,7 @@
 			baseConfigurationReference = C0E90F825C7BA8C761221325 /* Pods-KMCAirStreamerDemo_iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 36PUU93BJ2;
+				DEVELOPMENT_TEAM = ZGJ54Q7R45;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -434,7 +434,7 @@
 			baseConfigurationReference = 4FA2FA470BE5875C85290304 /* Pods-KMCAirStreamerDemo_iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 36PUU93BJ2;
+				DEVELOPMENT_TEAM = ZGJ54Q7R45;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
