@@ -1,0 +1,25 @@
+before_script:
+  - source ~/.rvm/scripts/rvm
+  - export LANG=en_US.UTF-8
+stages:
+  - build
+  # - release
+  # - deploy
+
+build_pod_dy:
+  stage: build
+  script:
+    - cd demo
+    - pod install
+    - xcodebuild -workspace *.xcwork* -scheme demo -quiet
+  tags:
+    - ios
+
+build_pod_static:
+  stage: build
+  script:
+    - cd demo
+    - pod install
+    - xcodebuild -workspace *.xcwork* -scheme demo -quiet
+  tags:
+    - ios
