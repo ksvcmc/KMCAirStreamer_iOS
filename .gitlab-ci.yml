@@ -1,0 +1,25 @@
+before_script:
+  - mkdir -p framework
+  - source ~/.rvm/scripts/rvm
+  - export LANG=en_US.UTF-8
+stages:
+  - build
+  # - release
+  # - deploy
+
+build_pod_dy:
+  stage: build
+  script:
+    - pod install
+    - xcodebuild -workspace *.xcwork* -scheme demo -quiet
+  tags:
+    - ios
+
+build_pod_static:
+  stage: build
+  script:
+    - sed -i "" "/use/d" Podfile
+    - pod install
+    - xcodebuild -workspace *.xcwork* -scheme demo -quiet
+  tags:
+    - ios
