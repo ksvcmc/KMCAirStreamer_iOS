@@ -8,18 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		0F2B540B60A9DF0D50453604 /* Pods_KMCAirStreamerDemo_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BBD1CE59A597704558CE28F /* Pods_KMCAirStreamerDemo_iOS.framework */; };
-		F23340A41F1C8C11007814B2 /* UIColor+Expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = F23340A31F1C8C11007814B2 /* UIColor+Expanded.m */; };
-		F23340A71F1CA8F4007814B2 /* helpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F23340A61F1CA8F4007814B2 /* helpViewController.m */; };
-		F24E8FAF1F134E0A006BB3ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F24E8FAE1F134E0A006BB3ED /* main.m */; };
-		F24E8FB21F134E0A006BB3ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F24E8FB11F134E0A006BB3ED /* AppDelegate.m */; };
-		F24E8FB81F134E0A006BB3ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F24E8FB61F134E0A006BB3ED /* Main.storyboard */; };
-		F24E8FBA1F134E0A006BB3ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F24E8FB91F134E0A006BB3ED /* Assets.xcassets */; };
-		F24E8FBD1F134E0A006BB3ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F24E8FBB1F134E0A006BB3ED /* LaunchScreen.storyboard */; };
-		F24E8FF21F1354D4006BB3ED /* recordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F24E8FEB1F1354D4006BB3ED /* recordViewController.m */; };
-		F24E8FF51F135875006BB3ED /* KSYAirStreamKit.m in Sources */ = {isa = PBXBuildFile; fileRef = F24E8FF41F135875006BB3ED /* KSYAirStreamKit.m */; };
-		F296DBBA1F1F3E5B00B29FD4 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F296DBB61F1F3E5B00B29FD4 /* LICENSE */; };
-		F296DBBB1F1F3E5B00B29FD4 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F296DBB81F1F3E5B00B29FD4 /* MBProgressHUD.m */; };
-		F296DBBC1F1F3E5B00B29FD4 /* README.mdown in Sources */ = {isa = PBXBuildFile; fileRef = F296DBB91F1F3E5B00B29FD4 /* README.mdown */; };
+		F29DCACB1F628AEE00DE4E31 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F29DCAB61F628AEE00DE4E31 /* AppDelegate.m */; };
+		F29DCACC1F628AEE00DE4E31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F29DCAB71F628AEE00DE4E31 /* Assets.xcassets */; };
+		F29DCACD1F628AEE00DE4E31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F29DCAB81F628AEE00DE4E31 /* LaunchScreen.storyboard */; };
+		F29DCACE1F628AEE00DE4E31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F29DCABA1F628AEE00DE4E31 /* Main.storyboard */; };
+		F29DCACF1F628AEE00DE4E31 /* helpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F29DCABD1F628AEE00DE4E31 /* helpViewController.m */; };
+		F29DCAD01F628AEE00DE4E31 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F29DCABE1F628AEE00DE4E31 /* Info.plist */; };
+		F29DCAD11F628AEE00DE4E31 /* KSYAirStreamKit.m in Sources */ = {isa = PBXBuildFile; fileRef = F29DCAC01F628AEE00DE4E31 /* KSYAirStreamKit.m */; };
+		F29DCAD21F628AEE00DE4E31 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F29DCAC11F628AEE00DE4E31 /* main.m */; };
+		F29DCAD31F628AEE00DE4E31 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F29DCAC31F628AEE00DE4E31 /* LICENSE */; };
+		F29DCAD41F628AEE00DE4E31 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F29DCAC51F628AEE00DE4E31 /* MBProgressHUD.m */; };
+		F29DCAD51F628AEE00DE4E31 /* README.mdown in Sources */ = {isa = PBXBuildFile; fileRef = F29DCAC61F628AEE00DE4E31 /* README.mdown */; };
+		F29DCAD61F628AEE00DE4E31 /* recordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F29DCAC81F628AEE00DE4E31 /* recordViewController.m */; };
+		F29DCAD71F628AEE00DE4E31 /* UIColor+Expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = F29DCACA1F628AEE00DE4E31 /* UIColor+Expanded.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,26 +40,26 @@
 		4BBD1CE59A597704558CE28F /* Pods_KMCAirStreamerDemo_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KMCAirStreamerDemo_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FA2FA470BE5875C85290304 /* Pods-KMCAirStreamerDemo_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KMCAirStreamerDemo_iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-KMCAirStreamerDemo_iOS/Pods-KMCAirStreamerDemo_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		C0E90F825C7BA8C761221325 /* Pods-KMCAirStreamerDemo_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KMCAirStreamerDemo_iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KMCAirStreamerDemo_iOS/Pods-KMCAirStreamerDemo_iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		F23340A21F1C8C11007814B2 /* UIColor+Expanded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Expanded.h"; sourceTree = "<group>"; };
-		F23340A31F1C8C11007814B2 /* UIColor+Expanded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Expanded.m"; sourceTree = "<group>"; };
-		F23340A51F1CA8F4007814B2 /* helpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = helpViewController.h; sourceTree = "<group>"; };
-		F23340A61F1CA8F4007814B2 /* helpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = helpViewController.m; sourceTree = "<group>"; };
 		F24E8FAA1F134E0A006BB3ED /* KMCAirStreamerDemo_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KMCAirStreamerDemo_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F24E8FAE1F134E0A006BB3ED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F24E8FB01F134E0A006BB3ED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		F24E8FB11F134E0A006BB3ED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F24E8FB71F134E0A006BB3ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F24E8FB91F134E0A006BB3ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F24E8FBC1F134E0A006BB3ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		F24E8FBE1F134E0A006BB3ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F24E8FEA1F1354D4006BB3ED /* recordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = recordViewController.h; sourceTree = "<group>"; };
-		F24E8FEB1F1354D4006BB3ED /* recordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = recordViewController.m; sourceTree = "<group>"; };
-		F24E8FF31F135875006BB3ED /* KSYAirStreamKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSYAirStreamKit.h; sourceTree = "<group>"; };
-		F24E8FF41F135875006BB3ED /* KSYAirStreamKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSYAirStreamKit.m; sourceTree = "<group>"; };
-		F296DBB61F1F3E5B00B29FD4 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		F296DBB71F1F3E5B00B29FD4 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
-		F296DBB81F1F3E5B00B29FD4 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		F296DBB91F1F3E5B00B29FD4 /* README.mdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.mdown; sourceTree = "<group>"; };
+		F29DCAB51F628AEE00DE4E31 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F29DCAB61F628AEE00DE4E31 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F29DCAB71F628AEE00DE4E31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F29DCAB91F628AEE00DE4E31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F29DCABB1F628AEE00DE4E31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F29DCABC1F628AEE00DE4E31 /* helpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = helpViewController.h; sourceTree = "<group>"; };
+		F29DCABD1F628AEE00DE4E31 /* helpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = helpViewController.m; sourceTree = "<group>"; };
+		F29DCABE1F628AEE00DE4E31 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F29DCABF1F628AEE00DE4E31 /* KSYAirStreamKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSYAirStreamKit.h; sourceTree = "<group>"; };
+		F29DCAC01F628AEE00DE4E31 /* KSYAirStreamKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSYAirStreamKit.m; sourceTree = "<group>"; };
+		F29DCAC11F628AEE00DE4E31 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F29DCAC31F628AEE00DE4E31 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		F29DCAC41F628AEE00DE4E31 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		F29DCAC51F628AEE00DE4E31 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		F29DCAC61F628AEE00DE4E31 /* README.mdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.mdown; sourceTree = "<group>"; };
+		F29DCAC71F628AEE00DE4E31 /* recordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = recordViewController.h; sourceTree = "<group>"; };
+		F29DCAC81F628AEE00DE4E31 /* recordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = recordViewController.m; sourceTree = "<group>"; };
+		F29DCAC91F628AEE00DE4E31 /* UIColor+Expanded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Expanded.h"; sourceTree = "<group>"; };
+		F29DCACA1F628AEE00DE4E31 /* UIColor+Expanded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Expanded.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +94,7 @@
 		F24E8FA11F134E0A006BB3ED = {
 			isa = PBXGroup;
 			children = (
-				F24E8FAC1F134E0A006BB3ED /* KMCAirStreamerDemo */,
+				F29DCAB41F628AEE00DE4E31 /* KMCAirStreamerDemo_iOS */,
 				F24E8FAB1F134E0A006BB3ED /* Products */,
 				A86FBF602D51F303A2A3D6CF /* Pods */,
 				A2660626A4BAA151F2A549DA /* Frameworks */,
@@ -108,44 +109,36 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F24E8FAC1F134E0A006BB3ED /* KMCAirStreamerDemo */ = {
+		F29DCAB41F628AEE00DE4E31 /* KMCAirStreamerDemo_iOS */ = {
 			isa = PBXGroup;
 			children = (
-				F296DBB51F1F3E5B00B29FD4 /* MBProgressHUD */,
-				F24E8FB01F134E0A006BB3ED /* AppDelegate.h */,
-				F24E8FB11F134E0A006BB3ED /* AppDelegate.m */,
-				F23340A21F1C8C11007814B2 /* UIColor+Expanded.h */,
-				F23340A31F1C8C11007814B2 /* UIColor+Expanded.m */,
-				F24E8FEA1F1354D4006BB3ED /* recordViewController.h */,
-				F24E8FEB1F1354D4006BB3ED /* recordViewController.m */,
-				F23340A51F1CA8F4007814B2 /* helpViewController.h */,
-				F23340A61F1CA8F4007814B2 /* helpViewController.m */,
-				F24E8FF31F135875006BB3ED /* KSYAirStreamKit.h */,
-				F24E8FF41F135875006BB3ED /* KSYAirStreamKit.m */,
-				F24E8FB61F134E0A006BB3ED /* Main.storyboard */,
-				F24E8FB91F134E0A006BB3ED /* Assets.xcassets */,
-				F24E8FBB1F134E0A006BB3ED /* LaunchScreen.storyboard */,
-				F24E8FBE1F134E0A006BB3ED /* Info.plist */,
-				F24E8FAD1F134E0A006BB3ED /* Supporting Files */,
+				F29DCAB51F628AEE00DE4E31 /* AppDelegate.h */,
+				F29DCAB61F628AEE00DE4E31 /* AppDelegate.m */,
+				F29DCAB71F628AEE00DE4E31 /* Assets.xcassets */,
+				F29DCAB81F628AEE00DE4E31 /* LaunchScreen.storyboard */,
+				F29DCABA1F628AEE00DE4E31 /* Main.storyboard */,
+				F29DCABC1F628AEE00DE4E31 /* helpViewController.h */,
+				F29DCABD1F628AEE00DE4E31 /* helpViewController.m */,
+				F29DCABE1F628AEE00DE4E31 /* Info.plist */,
+				F29DCABF1F628AEE00DE4E31 /* KSYAirStreamKit.h */,
+				F29DCAC01F628AEE00DE4E31 /* KSYAirStreamKit.m */,
+				F29DCAC11F628AEE00DE4E31 /* main.m */,
+				F29DCAC21F628AEE00DE4E31 /* MBProgressHUD */,
+				F29DCAC71F628AEE00DE4E31 /* recordViewController.h */,
+				F29DCAC81F628AEE00DE4E31 /* recordViewController.m */,
+				F29DCAC91F628AEE00DE4E31 /* UIColor+Expanded.h */,
+				F29DCACA1F628AEE00DE4E31 /* UIColor+Expanded.m */,
 			);
-			path = KMCAirStreamerDemo;
+			path = KMCAirStreamerDemo_iOS;
 			sourceTree = "<group>";
 		};
-		F24E8FAD1F134E0A006BB3ED /* Supporting Files */ = {
+		F29DCAC21F628AEE00DE4E31 /* MBProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
-				F24E8FAE1F134E0A006BB3ED /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		F296DBB51F1F3E5B00B29FD4 /* MBProgressHUD */ = {
-			isa = PBXGroup;
-			children = (
-				F296DBB61F1F3E5B00B29FD4 /* LICENSE */,
-				F296DBB71F1F3E5B00B29FD4 /* MBProgressHUD.h */,
-				F296DBB81F1F3E5B00B29FD4 /* MBProgressHUD.m */,
-				F296DBB91F1F3E5B00B29FD4 /* README.mdown */,
+				F29DCAC31F628AEE00DE4E31 /* LICENSE */,
+				F29DCAC41F628AEE00DE4E31 /* MBProgressHUD.h */,
+				F29DCAC51F628AEE00DE4E31 /* MBProgressHUD.m */,
+				F29DCAC61F628AEE00DE4E31 /* README.mdown */,
 			);
 			path = MBProgressHUD;
 			sourceTree = "<group>";
@@ -218,10 +211,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F24E8FBD1F134E0A006BB3ED /* LaunchScreen.storyboard in Resources */,
-				F24E8FBA1F134E0A006BB3ED /* Assets.xcassets in Resources */,
-				F296DBBA1F1F3E5B00B29FD4 /* LICENSE in Resources */,
-				F24E8FB81F134E0A006BB3ED /* Main.storyboard in Resources */,
+				F29DCAD01F628AEE00DE4E31 /* Info.plist in Resources */,
+				F29DCACE1F628AEE00DE4E31 /* Main.storyboard in Resources */,
+				F29DCACC1F628AEE00DE4E31 /* Assets.xcassets in Resources */,
+				F29DCACD1F628AEE00DE4E31 /* LaunchScreen.storyboard in Resources */,
+				F29DCAD31F628AEE00DE4E31 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,34 +274,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F23340A71F1CA8F4007814B2 /* helpViewController.m in Sources */,
-				F24E8FB21F134E0A006BB3ED /* AppDelegate.m in Sources */,
-				F24E8FF51F135875006BB3ED /* KSYAirStreamKit.m in Sources */,
-				F24E8FAF1F134E0A006BB3ED /* main.m in Sources */,
-				F24E8FF21F1354D4006BB3ED /* recordViewController.m in Sources */,
-				F296DBBC1F1F3E5B00B29FD4 /* README.mdown in Sources */,
-				F23340A41F1C8C11007814B2 /* UIColor+Expanded.m in Sources */,
-				F296DBBB1F1F3E5B00B29FD4 /* MBProgressHUD.m in Sources */,
+				F29DCACB1F628AEE00DE4E31 /* AppDelegate.m in Sources */,
+				F29DCACF1F628AEE00DE4E31 /* helpViewController.m in Sources */,
+				F29DCAD41F628AEE00DE4E31 /* MBProgressHUD.m in Sources */,
+				F29DCAD51F628AEE00DE4E31 /* README.mdown in Sources */,
+				F29DCAD61F628AEE00DE4E31 /* recordViewController.m in Sources */,
+				F29DCAD21F628AEE00DE4E31 /* main.m in Sources */,
+				F29DCAD71F628AEE00DE4E31 /* UIColor+Expanded.m in Sources */,
+				F29DCAD11F628AEE00DE4E31 /* KSYAirStreamKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F24E8FB61F134E0A006BB3ED /* Main.storyboard */ = {
+		F29DCAB81F628AEE00DE4E31 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F24E8FB71F134E0A006BB3ED /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		F24E8FBB1F134E0A006BB3ED /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F24E8FBC1F134E0A006BB3ED /* Base */,
+				F29DCAB91F628AEE00DE4E31 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F29DCABA1F628AEE00DE4E31 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F29DCABB1F628AEE00DE4E31 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -420,7 +414,7 @@
 					../framework,
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = KMCAirStreamerDemo/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/KMCAirStreamerDemo_iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
@@ -444,7 +438,7 @@
 					../framework,
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = KMCAirStreamerDemo/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/KMCAirStreamerDemo_iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "";

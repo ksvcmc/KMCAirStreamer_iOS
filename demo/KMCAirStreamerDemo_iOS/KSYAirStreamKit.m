@@ -32,16 +32,6 @@
     if (self == nil) {
         return nil;
     }
-    _autoRetryCnt    = 0;
-    _maxAutoRetry    = 5;
-    _bRetry          = NO;
-    
-    
-    NSNotificationCenter* dc = [NSNotificationCenter defaultCenter];
-    [dc addObserver:self
-           selector:@selector(onNetStateEvent)
-               name:KSYNetStateEventNotification
-             object:nil];
     
     _airTunesServer = [[KMCAirTunesServer alloc] init];
     [_airTunesServer authorizeWithTokeID:tokenID onSuccess:^{
@@ -55,16 +45,22 @@
         _airTunesServer.videoProcessingCallback = ^(CVPixelBufferRef pixelBuffer, CMTime timeInfo) {
             [weakSelf.streamerBase processVideoPixelBuffer:pixelBuffer timeInfo:timeInfo];
         };
-        _aMixer.audioProcessingCallback = ^(CMSampleBufferRef buf) {
-            [weakSelf.streamerBase processAudioSampleBuffer:buf];
-        };
         _streamerBase.videoCodec = KSYVideoCodec_AUTO;
+        _streamerBase.videoEncodePerf = KSYVideoEncodePer_HighPerformance;
         _streamerBase.audioCodec = KSYAudioCodec_AT_AAC;
+        _streamerBase.audiokBPS  = 64;
         _streamerBase.streamStateChange = ^(KSYStreamState state) {
             [weakSelf onStreamStateChange:state];
         };
-        _streamerBase.videoEncodePerf = KSYVideoEncodePer_HighPerformance;
-
+        
+        _autoRetryCnt    = 0;
+        _maxAutoRetry    = 5;
+        _bRetry          = NO;
+        NSNotificationCenter* dc = [NSNotificationCenter defaultCenter];
+        [dc addObserver:self
+               selector:@selector(onNetStateEvent)
+                   name:KSYNetStateEventNotification
+                 object:nil];
         
         if(completeSuccess)
             completeSuccess();
@@ -94,6 +90,13 @@
 }
 
 - (void) startService {
+    __weak typeof(self) weakSelf = self;
+    _aMixer.pcmProcessingCallback = ^(uint8_t **pData, int nbSample, CMTime pts) {
+        [weakSelf.streamerBase processAudioData:pData
+                                       nbSample:nbSample
+                                     withFormat:weakSelf.aMixer.outFmtDes
+                                       timeinfo:&pts];
+    };
     [_airTunesServer startServerWithCfg:_airCfg];
 }
 - (void) stopService {
@@ -106,7 +109,7 @@
     NSLog(@"开始镜像");
     _streamerBase.videoFPS = _airCfg.framerate;
     _streamerBase.videoMaxBitrate  = _videoBitrate;
-    _streamerBase.videoInitBitrate = _videoBitrate;
+    _streamerBase.videoInitBitrate = _videoBitrate*6/10;
     _streamerBase.videoMinBitrate  = 0;
     [_streamerBase startStream:[NSURL URLWithString:_streamUrl]];
     if (_delegate && [_delegate respondsToSelector:@selector(didStartMirroring:)]) {
@@ -116,12 +119,17 @@
     }
     __weak typeof(self) weakSelf = self;
     _aCapDev        = [[KSYAudioCap alloc] init];
-    _aCapDev.audioProcessingCallback = ^(CMSampleBufferRef buf) {
-        [weakSelf.aMixer processAudioSampleBuffer:buf of:0];
+    // 关闭降噪处理, 减少CPU占用
+    _aCapDev.noiseSuppressionLevel = KSYAudioNoiseSuppress_OFF;
+    _aCapDev.pcmProcessingCallback = ^(uint8_t **pData, int len, const AudioStreamBasicDescription *fmt, CMTime timeInfo) {
+        [weakSelf.aMixer processAudioData:pData
+                                 nbSample:len
+                               withFormat:fmt
+                                 timeinfo:timeInfo
+                                       of:0];
     };
     [_aCapDev startCapture];
 }
-
 - (void)mirroringErrorDidOcccur:(KSYAirTunesServer *)server  withError:(NSError *)error {
     if (_delegate && [_delegate respondsToSelector:@selector(mirroringErrorDidOcccur:withError:)]) {
         dispatch_async(dispatch_get_main_queue(), ^() {
@@ -130,12 +138,11 @@
     }
 }
 - (void)didStopMirroring:(KSYAirTunesServer *)server {
-    if (_delegate && [_delegate respondsToSelector:@selector(didStopMirroring:)]) {
+    if (_delegate && [_delegate respondsToSelector:@selector(didStartMirroring:)]) {
         dispatch_async(dispatch_get_main_queue(), ^() {
             [_delegate didStopMirroring:server ];
         });
     }
-    
     [_streamerBase stopStream];
     [_aCapDev stopCapture];
     _aCapDev = nil;
@@ -163,7 +170,7 @@
         }
     }
 }
-
+    
 - (void) onStreamError: (KSYStreamErrorCode) errCode {
     NSString * name = [_streamerBase getCurKSYStreamErrorCodeName];
     NSLog(@"stream Error: %@", [name substringFromIndex:19]);
@@ -175,7 +182,9 @@
             [self tryRtmpReconnect:2];
         }
     }
-    else if (errCode == KSYStreamErrorCode_RTMP_Publish_failed){
+    else if (errCode == KSYStreamErrorCode_RTMP_Publish_failed ||
+             errCode == KSYStreamErrorCode_RTMP_AlreadyExistStreamName||
+             errCode == KSYStreamErrorCode_RTMP_InternalError){
         if (_bRetry == NO){
             [self tryRtmpReconnect:5];
         }
@@ -187,8 +196,9 @@
             [self tryRtmpReconnect:1];
         }
     }
+    // 其他一些错误码跟地址有关, 需要重新获取地址再重连, 否则不起作用
 }
-
+    
 - (void) tryRtmpReconnect:(double) delay {
     _bRetry = YES;
     int64_t delaySec = (int64_t)(delay * NSEC_PER_SEC);

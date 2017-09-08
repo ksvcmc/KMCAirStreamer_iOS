@@ -4,7 +4,7 @@ use_frameworks!
 
 target 'KMCAirStreamerDemo_iOS' do
   pod 'GPUImage'
-  pod 'libksygpulive/libksygpulive'
+  pod 'libksygpulive/libksygpulive', '~> 2.6.1'
   pod 'CocoaAsyncSocket', '7.4.1'
-  pod 'KMCAirStreamer'
+  pod 'KMCAirStreamer', :path => '../'
 end

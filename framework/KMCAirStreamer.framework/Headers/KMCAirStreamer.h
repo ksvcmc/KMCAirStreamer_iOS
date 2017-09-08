@@ -76,13 +76,21 @@ typedef NS_ENUM(NSUInteger, KSYAirState) {
     KSYAirState_Error,
 };
 
+/** airplay的状态信息 */
+typedef NS_ENUM(NSUInteger, KSYAirVideoDecoder) {
+    /// 软解
+    KSYAirVideoDecoder_SOFTWARE,
+    /// 硬解
+    KSYAirVideoDecoder_VIDEOTOOLBOX,
+};
+
 #pragma mark - KSYAirTunesConfig
 /** airplay的配置信息 */
 @interface KSYAirTunesConfig : NSObject
 /// AirPlay 设备的名字
 @property(nonatomic, copy) NSString *airplayName;
 /// 接收设备的尺寸(竖屏时高度为videoSize, 宽度根据屏幕比例计算得到,横屏时反之)
-@property(nonatomic, assign) int videoSize;
+@property(nonatomic, assign) CGSize videoSize;
 /// 希望接收到ios发送端的视频帧率 默认30
 @property(nonatomic, assign) int framerate;
 /// 设置airtunes 服务的监听端口, 0 表示系统自动分配
@@ -91,6 +99,8 @@ typedef NS_ENUM(NSUInteger, KSYAirState) {
 @property(nonatomic, assign) short airVideoPort;
 /// 设备的mac地址, 默认随机生成,(长度为6字节)
 @property(nonatomic, copy) NSData *macAddr;
+/// AirPlay接收数据的解码器(默认为KSYAirVideoDecoder_SOFTWARE)
+@property(nonatomic, assign) KSYAirVideoDecoder videoDecoder;
 @end
 
 #pragma mark - KSYAirDelegate

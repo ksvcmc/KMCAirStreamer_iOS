@@ -167,7 +167,8 @@
         cfg.framerate = _frameRate;
         NSString * name = [self.addrTextField.text substringFromIndex:self.addrTextField.text.length-3];
         cfg.airplayName = [NSString stringWithFormat:@"ksyair_%@", name];
-        cfg.videoSize = _videoSize;
+        cfg.videoSize = CGSizeMake(_videoSize, _videoSize);
+        cfg.videoDecoder = KSYAirVideoDecoder_VIDEOTOOLBOX;
 
         _kit.airCfg = cfg;
         //设置推流地址
