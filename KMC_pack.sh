@@ -84,9 +84,9 @@ echo "=================== upload github==================="
 cd ..
 git add *
 git commit -a -m "modify spec"
-git tag -f $version
+git tag -f v$version
 git push github master
-git push github $version
+git push github v$version
 echo "upload github success"
 echo "=================== 发布到cocoapod==================="
 pod trunk push *.podspec --allow-warnings --verbose
