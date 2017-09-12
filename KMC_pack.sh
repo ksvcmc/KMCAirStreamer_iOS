@@ -70,15 +70,15 @@ echo "=================== upload ipa  @ `date`==================="
 #rm -rf archiveDir.xcarchive
 #rm -rf ${TARGET}.ipa
 echo "===================modify podspec=================="
-#PlistBuddy="/usr/libexec/PlistBuddy"
-#plistFile=$(find ${TARGET} -name "Info.plist")
-#echo "plistFile -- $plistFile"
-##获取工程版本号
-#version=$($PlistBuddy -c "Print :CFBundleShortVersionString" $plistFile)
-#echo "version -- $version"
-#
-#sed "s@(s.version.*=) \"[.0-9]*\"@\1 \"$version\"@" \
-#../*.podspec
+PlistBuddy="/usr/libexec/PlistBuddy"
+plistFile=$(find ${TARGET} -name "Info.plist")
+echo "plistFile -- $plistFile"
+#获取工程版本号
+version=$($PlistBuddy -c "Print :CFBundleShortVersionString" $plistFile)
+echo "version -- $version"
+
+sed "s@(s.version.*=) \"[.0-9]*\"@\1 \"$version\"@" \
+../*.podspec
 
 echo "=================== upload github==================="
 cd ..
