@@ -322,6 +322,8 @@
 - (void)mirroringErrorDidOcccur:(KSYAirTunesServer *)server  withError:(NSError *)error {
     //[_kit stopService];
     NSLog(@"error happen,%@",error);
+    self.recordButton.selected = YES;
+    [self.recordButton setImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
 }
 - (void)didStopMirroring:(KSYAirTunesServer *)server {
     NSLog(@"停止镜像");
