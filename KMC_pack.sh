@@ -85,7 +85,7 @@ cd ..
 git add *
 git commit -a -m "modify spec"
 git tag $version
-git push origin $version
+git push github $version
 echo "upload github success"
 echo "=================== 发布到cocoapod==================="
 pod trunk push *.podspec --allow-warnings --verbose
