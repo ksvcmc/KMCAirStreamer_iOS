@@ -85,6 +85,7 @@ cd ..
 git add *
 git commit -a -m "modify spec"
 git tag -f $version
+git push github master
 git push github $version
 echo "upload github success"
 echo "=================== 发布到cocoapod==================="
