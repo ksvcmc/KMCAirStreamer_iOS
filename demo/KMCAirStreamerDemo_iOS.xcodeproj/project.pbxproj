@@ -179,7 +179,7 @@
 					F24E8FA91F134E0A006BB3ED = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 36PUU93BJ2;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -404,8 +404,8 @@
 			baseConfigurationReference = C0E90F825C7BA8C761221325 /* Pods-KMCAirStreamerDemo_iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				DEVELOPMENT_TEAM = 36PUU93BJ2;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -421,8 +421,8 @@
 				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ksyun.KMCAirStreamerDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0306bb3a-2b76-4fd5-be69-a2eb11e7b7ca";
-				PROVISIONING_PROFILE = "0306bb3a-2b76-4fd5-be69-a2eb11e7b7ca";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -431,8 +431,8 @@
 			baseConfigurationReference = 4FA2FA470BE5875C85290304 /* Pods-KMCAirStreamerDemo_iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				DEVELOPMENT_TEAM = 36PUU93BJ2;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -448,8 +448,8 @@
 				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ksyun.KMCAirStreamerDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0306bb3a-2b76-4fd5-be69-a2eb11e7b7ca";
-				PROVISIONING_PROFILE = "0306bb3a-2b76-4fd5-be69-a2eb11e7b7ca";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};

@@ -56,6 +56,8 @@ typedef NS_ENUM(NSUInteger, KSYAirErrorCode) {
     KSYAirErrorCodeNetworkDisconnection,
     /// 连接AirPlay超时
     KSYAirErrorCodeAirPlaySelectTimeout,
+    /// 连接失败
+    KSYAirErrorCodeConnectFailed,
     /// 连接断开
     KSYAirErrorCodeConnectBreak,
     /// 其他错误
@@ -84,14 +86,20 @@ typedef NS_ENUM(NSUInteger, KSYAirVideoDecoder) {
     KSYAirVideoDecoder_VIDEOTOOLBOX,
 };
 
+
 #pragma mark - KSYAirTunesConfig
 /** airplay的配置信息 */
 @interface KSYAirTunesConfig : NSObject
 /// AirPlay 设备的名字
 @property(nonatomic, copy) NSString *airplayName;
-/// 接收设备的尺寸(竖屏时高度为videoSize, 宽度根据屏幕比例计算得到,横屏时反之)
+/// 接收设备的尺寸 (默认为 960x960)
+/// 如果videoSize的宽高相同, 则横竖屏旋转时,输出的分辨率保持不变;
+/// 当宽高不同时, 横竖屏旋转后, 高度保持不变, 宽度会跟随设备的屏幕比例变化
+/// 请注意,宽高比需要和屏幕的比例相同, 否则内部自动按照画面小的数值计算
 @property(nonatomic, assign) CGSize videoSize;
-/// 希望接收到ios发送端的视频帧率 默认30
+/// 是否需要在宽高不同时, 在屏幕两边填上黑边 (默认为 NO)
+@property(nonatomic, assign) BOOL padding;
+/// 希望接收到ios发送端的视频帧率 (有效值为 10, 15, 30), 默认为30
 @property(nonatomic, assign) int framerate;
 /// 设置airtunes 服务的监听端口, 0 表示系统自动分配
 @property(nonatomic, assign) short airTunesPort;
