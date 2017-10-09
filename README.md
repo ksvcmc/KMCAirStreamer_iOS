@@ -31,8 +31,6 @@ token与应用包名为一一对应的关系;
 
 目前sdk支持pod导入.
 - pod ‘KMCAirStreamer’
-- 由于特殊原因1.3.0的导入方式如下 
-pod 'KMCAirStreamer', :git => 'https://github.com/ksvcmc/KMCAirStreamer_iOS.git', :tag => 'v1.3.0'
 
 ## SDK包总体介绍
 - **KMCAirTunesServer**---录屏服务端类，可以拿到录屏后数据，以及录屏中各种事件。
