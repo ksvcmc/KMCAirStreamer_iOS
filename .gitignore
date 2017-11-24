@@ -30,9 +30,7 @@ Temporary Items
 lib/
 *.ipa
 xcuserdata
-
-
+xcshareddata
+*.log
 *.xcworkspace/
 .DS_Store
-KMC_pack.sh
-.gitlab-ci.yml

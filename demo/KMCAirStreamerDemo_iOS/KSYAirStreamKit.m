@@ -20,6 +20,7 @@
     BOOL           _bRetry;
     int            _maxAutoRetry;
 }
+@property (nonatomic,strong) NSFileHandle *fileHandle;
 
 @end
 
@@ -32,6 +33,14 @@
     if (self == nil) {
         return nil;
     }
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *h264File = [documentsDirectory stringByAppendingPathComponent:@"test.h264"];
+    [fileManager removeItemAtPath:h264File error:nil];
+    [fileManager createFileAtPath:h264File contents:nil attributes:nil];
+    self.fileHandle = [NSFileHandle fileHandleForWritingAtPath:h264File];
     
     _airTunesServer = [[KMCAirTunesServer alloc] init];
     [_airTunesServer authorizeWithTokeID:tokenID onSuccess:^{
@@ -52,6 +61,43 @@
         _streamerBase.streamStateChange = ^(KSYStreamState state) {
             [weakSelf onStreamStateChange:state];
         };
+        
+        _airTunesServer.videoBitStreamCallback = ^(NSData *data, BOOL bParameterSet, CMTime timeInfo) {
+            __strong typeof(weakSelf)strongSelf =weakSelf;
+            if(bParameterSet) {
+                ///软解的话, data.bytes 可以直接送入ffmpeg的extradata解码
+                ///videotoolbox的话, 可用如下代码先解析
+                size_t psCnt = 0;
+                uint8_t * psData[8] ={NULL};
+                size_t psLen[8] = {0};
+                int nalLen = KSYAirParseParamSets(data, psData, psLen, &psCnt);
+                NSLog(@"paramset %zu", psCnt);
+                NSLog(@"nalLen %d", nalLen);
+                for (int i = 0; i < psCnt; ++i) {
+                    if (psData[i]) {
+                        const char bytes[] = "\x00\x00\x00\x01";
+                        size_t length = (sizeof bytes) - 1; //string literals have implicit trailing '\0'
+                        NSData *ByteHeader = [NSData dataWithBytes:bytes length:length];
+                        [strongSelf.fileHandle writeData:ByteHeader];
+                        NSLog(@"%zu",psLen[i]);
+                        [strongSelf.fileHandle writeData:[NSData dataWithBytes:psData[i] length:psLen[i]]];
+                        free(psData[i]);
+                    }
+                }
+            }
+            else {
+                int32_t* pNalLen = (int32_t*)data.bytes;
+                int32_t nalLen = CFSwapInt32(*pNalLen);
+                const char bytes[] = "\x00\x00\x00\x01";
+                size_t length = (sizeof bytes) - 1; //string literals have implicit trailing '\0'
+                NSData *ByteHeader = [NSData dataWithBytes:bytes length:length];
+                [strongSelf.fileHandle writeData:ByteHeader];
+                NSData *dataBody =[ data subdataWithRange:NSMakeRange(4, nalLen-4)];
+                [strongSelf.fileHandle writeData:dataBody];
+                
+            }
+        };
+        
         
         _autoRetryCnt    = 0;
         _maxAutoRetry    = 5;
