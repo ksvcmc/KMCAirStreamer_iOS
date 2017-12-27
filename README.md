@@ -1,4 +1,10 @@
 
+[![Apps Using](https://img.shields.io/cocoapods/at/KMCAirStreamer.svg?label=Apps%20Using%20KMCAirStreamer&colorB=28B9FE)](http://cocoapods.org/pods/KMCAirStreamer)[![Downloads](https://img.shields.io/cocoapods/dt/KMCAirStreamer.svg?label=Total%20Downloads%20KMCAirStreamer&colorB=28B9FE)](http://cocoapods.org/pods/KMCAirStreamer)
+
+[![Latest release](https://img.shields.io/github/release/ksvcmc/KMCAirStreamer_iOS.svg)](https://github.com/ksvcmc/KMCAirStreamer_iOS/releases/latest)
+[![CocoaPods platform](https://img.shields.io/cocoapods/p/KMCAirStreamer.svg)](https://cocoapods.org/pods/KMCAirStreamer)
+[![CocoaPods version](https://img.shields.io/cocoapods/v/KMCAirStreamer.svg?label=pod_github)](https://cocoapods.org/pods/KMCAirStreamer)
+
 ## 项目背景
 
 金山魔方是一个多媒体能力提供平台，通过统一接入API、统一鉴权、统一计费等多种手段，降低客户接入多媒体处理能力的代价，提供多媒体能力供应商的效率。 本文档主要对录屏功能说明。
