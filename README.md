@@ -1,6 +1,7 @@
 
 [![Apps Using](https://img.shields.io/cocoapods/at/KMCAirStreamer.svg?label=Apps%20Using%20KMCAirStreamer&colorB=28B9FE)](http://cocoapods.org/pods/KMCAirStreamer)[![Downloads](https://img.shields.io/cocoapods/dt/KMCAirStreamer.svg?label=Total%20Downloads%20KMCAirStreamer&colorB=28B9FE)](http://cocoapods.org/pods/KMCAirStreamer)
 
+[![Build Status](https://travis-ci.org/ksvcmc/KMCAirStreamer.svg?branch=master)](https://travis-ci.org//ksvcmc/KMCAirStreamer)
 [![Latest release](https://img.shields.io/github/release/ksvcmc/KMCAirStreamer_iOS.svg)](https://github.com/ksvcmc/KMCAirStreamer_iOS/releases/latest)
 [![CocoaPods platform](https://img.shields.io/cocoapods/p/KMCAirStreamer.svg)](https://cocoapods.org/pods/KMCAirStreamer)
 [![CocoaPods version](https://img.shields.io/cocoapods/v/KMCAirStreamer.svg?label=pod_github)](https://cocoapods.org/pods/KMCAirStreamer)
