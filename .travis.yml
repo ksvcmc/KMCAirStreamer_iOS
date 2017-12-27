@@ -1,0 +1,8 @@
+language: objective-c
+osx_image: xcode9
+xcode_workspace: demo/KMCAirStreamerDemo_iOS.xcworkspace
+xcode_scheme: KMCAgoraVRTCDemo
+script:
+    - cd demo
+    - pod install
+    - xcodebuild clean build -sdk iphonesimulator -workspace KMCAirStreamerDemo_iOS.xcworkspace -scheme KMCAirStreamerDemo_iOS CODE_SIGNING_REQUIRED=NO
