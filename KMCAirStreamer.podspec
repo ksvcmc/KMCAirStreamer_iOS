@@ -140,4 +140,8 @@ Pod::Spec.new do |s|
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "MJExtension"
   # s.dependency "UICKeyChainStore", "2.1.1"
+   s.ios.library = 'z', 'iconv', 'stdc++.6', 'bz2'
+   s.ios.frameworks   = [ 'AVFoundation', 'VideoToolbox', 'MediaPlayer']
+   s.dependency 'libksygpulive/libksygpulive'
+   s.dependency 'CocoaAsyncSocket'
 end

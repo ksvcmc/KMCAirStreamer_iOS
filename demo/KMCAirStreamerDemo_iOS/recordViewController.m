@@ -31,6 +31,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *timerLabel;
 @property (weak, nonatomic) IBOutlet UISlider *bitrateSlide;
 @property (weak, nonatomic) IBOutlet UILabel *bitrateLabel;
+@property (assign,nonatomic)BOOL isSupportAdding;
+@property (weak, nonatomic) IBOutlet UISwitch *paddingSwitch;
 
 @end
 
@@ -43,6 +45,8 @@
     [self askForPhotoLibraryAuth];
     [self askForMicAuth];
     [self setupUI];
+    _isSupportAdding = NO;
+ 
     
     _kit = [[KSYAirStreamKit alloc] initWithTokeID:@"eb84554d62dfddcf0f6328c43bacba13" onSuccess:^(void){
         NSLog(@"鉴权成功");
@@ -55,7 +59,7 @@
     _kit.delegate = self;
     
     _frameRate = 24;
-    _videoSize = 720;
+    _videoSize = 1280;
     _bitrate = 1500;
     
     NSNotificationCenter* dc = [NSNotificationCenter defaultCenter];
@@ -107,7 +111,7 @@
     //分辨率颜色
     self.resolution.tintColor = [UIColor colorWithHexString:@"#25bdd8"];
     //推流地址
-    NSString *rtmpSrv = @"rtmp://test.uplive.ks-cdn.com/live";
+    NSString *rtmpSrv = @"rtmp://mobile.kscvbu.cn/live";
     NSString *devCode = [[[[[UIDevice currentDevice] identifierForVendor] UUIDString] lowercaseString]substringToIndex:3];
     NSString *url     = [NSString stringWithFormat:@"%@/%@", rtmpSrv, devCode];
     self.addrTextField.text = url;
@@ -136,7 +140,7 @@
             _videoSize = 1280;
             break;
         default:
-            _videoSize = 720;
+            _videoSize = 1280;
     }
 }
 - (IBAction)bitrateValueChanged:(id)sender {
@@ -155,8 +159,15 @@
     UISwitch * localSwitch = sender;
     _localRecord = localSwitch.on;
 }
+- (IBAction)isSupportAdding:(id)sender {
+    UISwitch * supportSwitch = sender;
+    _isSupportAdding  = supportSwitch.on;
+    
+}
+
 
 - (IBAction)record:(id)sender {
+    
     UIButton * recordButton = sender;
     if(recordButton.isSelected){//开始录制
         recordButton.selected = NO;
@@ -167,8 +178,27 @@
         cfg.framerate = _frameRate;
         NSString * name = [self.addrTextField.text substringFromIndex:self.addrTextField.text.length-3];
         cfg.airplayName = [NSString stringWithFormat:@"ksyair_%@", name];
-        cfg.videoSize = CGSizeMake(_videoSize, _videoSize);
         cfg.videoDecoder = KSYAirVideoDecoder_VIDEOTOOLBOX;
+        cfg.padding = _isSupportAdding;
+        int targetWdt = _videoSize;
+        CGSize screenSz = [UIScreen mainScreen].bounds.size;
+        CGFloat wdt = MAX(screenSz.width, screenSz.height);
+        CGFloat hgt = MIN(screenSz.width, screenSz.height);
+        CGFloat targetHgt =ceil(targetWdt*hgt/wdt);
+        if (self.paddingSwitch.on) {
+            cfg.padding = YES;
+            if (targetHgt< 720) { // wdt and hgt must larger than 720
+                targetHgt = targetWdt;
+                cfg.padding = NO;
+                self.paddingSwitch.on = NO;
+            }
+            cfg.videoSize = CGSizeMake(targetWdt, targetHgt);
+        }
+        else
+        {
+             cfg.videoSize = CGSizeMake(targetWdt, targetWdt);
+        }
+        
 
         _kit.airCfg = cfg;
         //设置推流地址
@@ -182,6 +212,7 @@
         self.saveSwitch.enabled = NO;
         self.frameSlide.enabled = NO;
         self.bitrateSlide.enabled = NO;
+        self.paddingSwitch.enabled = NO;
     }
     else{//结束录制
         [self stopTimer];
@@ -191,6 +222,7 @@
         self.saveSwitch.enabled = YES;
         self.frameSlide.enabled = YES;
         self.bitrateSlide.enabled = YES;
+        self.paddingSwitch.enabled = YES;
 
     }
 }
