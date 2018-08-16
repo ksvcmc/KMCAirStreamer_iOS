@@ -164,5 +164,4 @@ property(nonatomic, copy) void(^videoProcessingCallback)(CVPixelBufferRef pixelB
 [![QRcode](https://static.pgyer.com/app/qrcode/TIhS)](http://www.pgyer.com/TIhS) 
 ## 反馈与建议  
 主页：[金山魔方](https://docs.ksyun.com/read/latest/142/_book/index.html)  
-邮箱：ksc-vbu-kmc-dev@kingsoft.com  
-QQ讨论群：574179720 [视频云技术交流群]
+邮箱：ksc-vbu-kmc-dev@kingsoft.com
